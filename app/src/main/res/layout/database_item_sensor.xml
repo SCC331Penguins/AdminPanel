@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="810dp"
+    android:layout_height="50dp">
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:background="#DDD"
+        android:id="@+id/database_item_id"
+        android:text="430032000f47353136383631"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="#AAA" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="match_parent"
+        android:background="#DDD"
+        android:id="@+id/database_item_owner"
+        android:text="SCC33102_R011"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="#AAA" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:background="#DDD"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textAlignment="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/sensor_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="LIGHT"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensor_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="HUMID"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensor_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="TEMP"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensor_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="SOUND"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensor_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="MOVE"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#AAA" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensor_32"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="TILT"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_32"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensor_64"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="UV"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_64"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensor_128"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ddd"
+                    android:paddingTop="5dp"
+                    android:text="IR"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/sensor_status_128"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FF00" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="#AAA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DDD"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/remove_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:text="Remove"
+            android:backgroundTint="#ff4343"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

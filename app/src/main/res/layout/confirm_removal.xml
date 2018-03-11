@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="550dp"
+    android:layout_height="wrap_content"
+    android:minHeight="200dp"
+    android:minWidth="550dp"
+    android:background="#3d6596"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Confirm Removal"
+        android:textColor="#c4c4c4"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="55sp"
+        />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Removal"
+        android:textColor="#c4c4c4"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:backgroundTint="#373d52"
+        android:text="Remove"
+        />
+
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:backgroundTint="#373d52"
+        android:text="Cancel"
+        />
+
+</LinearLayout>
