@@ -85,9 +85,17 @@ public class UserManagerFragment extends Fragment implements DatabaseDataListene
         databaseList.setAdapter(adapter);
     }
 
-    public void addUserData(User user) {
-        databaseItems.add(user);
-        adapter.notifyDataSetChanged();
+    public void addUserData(User user){
+        User userToRemove = null;
+        for(User u : databaseItems){
+            if(u.getUsername().equals(user.getUsername())){
+                userToRemove = u;
+            }
+        }
+        if(userToRemove == null) {
+            databaseItems.add(user);
+            adapter.notifyDataSetChanged();
+        }
     }
 
     public void removeUserData(User user) {

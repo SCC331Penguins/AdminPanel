@@ -2,7 +2,8 @@ package app.android.scc331.setadmin.REST;
 
 public class RestPaths {
 
-    public static final String IP = "192.168.1.73";
+    public static final String IP = "192.168.0.113";
+
     public static final String URL = "http://" + IP + ":5001";
 
     public static final String URL_PREFIX = URL + "/admin";
@@ -30,6 +31,7 @@ public class RestPaths {
     public static final String REMOVE_ROUTER = URL_PREFIX + "/remove_router";
 
     public static final String GET_ROUTERS = URL_PREFIX + "/get_routers";
+
     public static final String GET_SENSORS = URL_PREFIX + "/get_sensors";
 
 }
