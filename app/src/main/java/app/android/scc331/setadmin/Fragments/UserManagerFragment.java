@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.NonNull;
@@ -15,11 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.ArrayList;
@@ -28,14 +24,10 @@ import app.android.scc331.setadmin.LoginActivity;
 import app.android.scc331.setadmin.R;
 import app.android.scc331.setadmin.REST.DataObjects.DatabaseDataListener;
 import app.android.scc331.setadmin.REST.DataObjects.DatabaseSet;
-import app.android.scc331.setadmin.REST.DataObjects.Router;
 import app.android.scc331.setadmin.REST.DataObjects.User;
 import app.android.scc331.setadmin.REST.Interfaces.RestOperationListener;
-import app.android.scc331.setadmin.REST.RemoveRouterOperation;
-import app.android.scc331.setadmin.REST.RemoveSensorOperation;
-import app.android.scc331.setadmin.REST.RemoveUserOperation;
-import app.android.scc331.setadmin.REST.SensorDatabaseOperation;
-import app.android.scc331.setadmin.REST.SetUserAdminOperation;
+import app.android.scc331.setadmin.REST.TEST.RestOperationFactory;
+import app.android.scc331.setadmin.REST.TEST.SetRESTOperation;
 import app.android.scc331.setadmin.REST.UserDatabaseOperation;
 
 public class UserManagerFragment extends Fragment implements DatabaseDataListener, RestOperationListener {
@@ -139,8 +131,10 @@ public class UserManagerFragment extends Fragment implements DatabaseDataListene
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        RemoveUserOperation removeUserOperation = new RemoveUserOperation(getActivity());
-                        removeUserOperation.start(user.getUsername());
+
+                        SetRESTOperation removeOperation = RestOperationFactory.removeUserOperation(getActivity(), user.getUsername());
+                        removeOperation.run();
+
                         alertDialog.cancel();
                     }
                 });
@@ -185,8 +179,10 @@ public class UserManagerFragment extends Fragment implements DatabaseDataListene
                         }else{
                             admin = 0;
                         }
-                        SetUserAdminOperation setUserAdminOperation = new SetUserAdminOperation(getActivity());
-                        setUserAdminOperation.start(user.getUsername(), admin);
+
+                        SetRESTOperation adminOperation = RestOperationFactory.adminOperation(getActivity(), user.getUsername(), adminToggle.isChecked());
+                        adminOperation.run();
+
                         alertDialog.cancel();
                     }
                 });

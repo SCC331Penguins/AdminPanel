@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.NonNull;
@@ -25,17 +24,13 @@ import java.util.ArrayList;
 
 import app.android.scc331.setadmin.LoginActivity;
 import app.android.scc331.setadmin.R;
-import app.android.scc331.setadmin.REST.AddRouterOperation;
-import app.android.scc331.setadmin.REST.AddSensorRestOperation;
 import app.android.scc331.setadmin.REST.DataObjects.DatabaseDataListener;
 import app.android.scc331.setadmin.REST.DataObjects.DatabaseSet;
-import app.android.scc331.setadmin.REST.DataObjects.Router;
 import app.android.scc331.setadmin.REST.DataObjects.Sensor;
-import app.android.scc331.setadmin.REST.DataObjects.User;
 import app.android.scc331.setadmin.REST.Interfaces.RestOperationListener;
-import app.android.scc331.setadmin.REST.RemoveRouterOperation;
-import app.android.scc331.setadmin.REST.RemoveSensorOperation;
 import app.android.scc331.setadmin.REST.SensorDatabaseOperation;
+import app.android.scc331.setadmin.REST.TEST.RestOperationFactory;
+import app.android.scc331.setadmin.REST.TEST.SetRESTOperation;
 
 public class SensorManagerFragment extends Fragment implements DatabaseDataListener, RestOperationListener {
 
@@ -120,8 +115,10 @@ public class SensorManagerFragment extends Fragment implements DatabaseDataListe
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        RemoveSensorOperation removeSensorOperation = new RemoveSensorOperation(getActivity());
-                        removeSensorOperation.start(sensor.getId());
+
+                        SetRESTOperation removeOperation = RestOperationFactory.removeSensorOperation(getActivity(), sensor.getId());
+                        removeOperation.run();
+
                         alertDialog.cancel();
                     }
                 });
@@ -161,8 +158,10 @@ public class SensorManagerFragment extends Fragment implements DatabaseDataListe
                             if (!isUnique(sensor_id_text.getText().toString())) {
                                 Toast.makeText(getActivity(), "Not unique ID", Toast.LENGTH_LONG).show();
                             } else {
-                                AddSensorRestOperation addSensorRestOperation = new AddSensorRestOperation(getActivity());
-                                addSensorRestOperation.start(sensor_id_text.getText().toString(), restOperationListener);
+
+                                SetRESTOperation addOperation = RestOperationFactory.addSensorOperation(getActivity(), sensor_id_text.getText().toString());
+                                addOperation.run();
+
                                 alertDialog.cancel();
                             }
                         }

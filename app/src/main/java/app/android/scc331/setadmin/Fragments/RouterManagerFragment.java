@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.NonNull;
@@ -13,7 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,13 +24,13 @@ import java.util.ArrayList;
 
 import app.android.scc331.setadmin.LoginActivity;
 import app.android.scc331.setadmin.R;
-import app.android.scc331.setadmin.REST.AddRouterOperation;
 import app.android.scc331.setadmin.REST.DataObjects.DatabaseDataListener;
 import app.android.scc331.setadmin.REST.DataObjects.DatabaseSet;
 import app.android.scc331.setadmin.REST.DataObjects.Router;
 import app.android.scc331.setadmin.REST.Interfaces.RestOperationListener;
-import app.android.scc331.setadmin.REST.RemoveRouterOperation;
 import app.android.scc331.setadmin.REST.RouterDatabaseOperation;
+import app.android.scc331.setadmin.REST.TEST.RestOperationFactory;
+import app.android.scc331.setadmin.REST.TEST.SetRESTOperation;
 
 public class RouterManagerFragment extends Fragment implements DatabaseDataListener, RestOperationListener {
 
@@ -109,8 +107,11 @@ public class RouterManagerFragment extends Fragment implements DatabaseDataListe
                                     Toast.makeText(getActivity(), "Only 3 Digit Number", Toast.LENGTH_LONG).show();
                                     return;
                                 }
-                                AddRouterOperation addRouterOperation = new AddRouterOperation(getActivity());
-                                addRouterOperation.start("SCC33102_R" + router_id_text.getText().toString(), restOperationListener);
+
+                                String router_id = "SCC33102_R" + router_id_text.getText().toString();
+                                SetRESTOperation addOperation = RestOperationFactory.addRouterOperation(getActivity(), router_id);
+                                addOperation.run();
+
                                 alertDialog.cancel();
                             }
                         }
@@ -243,8 +244,10 @@ public class RouterManagerFragment extends Fragment implements DatabaseDataListe
                     public void onClick(View view) {
                         databaseItems.remove(router);
                         adapter.notifyDataSetChanged();
-                        RemoveRouterOperation removeRouterOperation = new RemoveRouterOperation(getActivity());
-                        removeRouterOperation.start(router.id);
+
+                        SetRESTOperation removeOperation = RestOperationFactory.removeRouterOperation(getActivity(), router.id);
+                        removeOperation.run();
+
                         alertDialog.cancel();
                     }
                 });
