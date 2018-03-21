@@ -2,7 +2,7 @@ package app.android.scc331.setadmin.REST;
 
 public class RestPaths {
 
-    public static final String IP = "192.168.0.113";
+    public static final String IP = "192.168.0.100";
 
     public static final String URL = "http://" + IP + ":5001";
 

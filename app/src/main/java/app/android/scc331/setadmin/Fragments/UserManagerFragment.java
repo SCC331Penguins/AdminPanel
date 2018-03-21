@@ -26,8 +26,8 @@ import app.android.scc331.setadmin.REST.DataObjects.DatabaseDataListener;
 import app.android.scc331.setadmin.REST.DataObjects.DatabaseSet;
 import app.android.scc331.setadmin.REST.DataObjects.User;
 import app.android.scc331.setadmin.REST.Interfaces.RestOperationListener;
-import app.android.scc331.setadmin.REST.TEST.RestOperationFactory;
-import app.android.scc331.setadmin.REST.TEST.SetRESTOperation;
+import app.android.scc331.setadmin.REST.Operation.RestOperationFactory;
+import app.android.scc331.setadmin.REST.Operation.SetRESTOperation;
 import app.android.scc331.setadmin.REST.UserDatabaseOperation;
 
 public class UserManagerFragment extends Fragment implements DatabaseDataListener, RestOperationListener {

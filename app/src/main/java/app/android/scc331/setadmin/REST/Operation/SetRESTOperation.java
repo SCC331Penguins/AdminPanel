@@ -1,11 +1,9 @@
-package app.android.scc331.setadmin.REST.TEST;
+package app.android.scc331.setadmin.REST.Operation;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.Button;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -36,7 +34,8 @@ public class SetRESTOperation {
 
     private Context context;
 
-    SetRESTOperation(Context context, String url, String router_id, String sensor_id, String username, Boolean is_admin){
+    SetRESTOperation(Context context, String url, String router_id,
+                     String sensor_id, String username, Boolean is_admin){
         this.context = context;
         HttpParams httpParams = new BasicHttpParams();
         int timeoutConnection = 5000;
